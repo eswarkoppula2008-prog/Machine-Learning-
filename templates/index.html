@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Placement Dataset Analysis</title>
+
+    <style>
+
+        body{
+
+            font-family:Arial;
+            margin:40px;
+            background:#f5f5f5;
+
+        }
+
+        table{
+
+            border-collapse:collapse;
+            width:100%;
+            background:white;
+
+        }
+
+        table,th,td{
+
+            border:1px solid black;
+            padding:8px;
+
+        }
+
+        h1{
+
+            color:blue;
+
+        }
+
+        img{
+
+            width:700px;
+            margin-top:20px;
+            margin-bottom:40px;
+            border:2px solid black;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>Placement Dataset Analysis</h1>
+
+<h2>Dataset Head</h2>
+
+{{ head|safe }}
+
+<h2>Describe</h2>
+
+{{ describe|safe }}
+
+<h2>Missing Values</h2>
+
+{{ missing|safe }}
+
+<h2>Data Types</h2>
+
+{{ dtypes|safe }}
+
+<h2>CGPA Category</h2>
+
+{{ cgpa|safe }}
+
+<h2>Histogram</h2>
+
+<img src="{{ url_for('static',filename='graphs/histogram.png') }}">
+
+<h2>Box Plot</h2>
+
+<img src="{{ url_for('static',filename='graphs/boxplot.png') }}">
+
+<h2>Scatter Plot</h2>
+
+<img src="{{ url_for('static',filename='graphs/scatter.png') }}">
+
+<h2>Heatmap</h2>
+
+<img src="{{ url_for('static',filename='graphs/heatmap.png') }}">
+
+</body>
+
+</html>
